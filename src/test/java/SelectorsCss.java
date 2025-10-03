@@ -76,7 +76,7 @@ public class SelectorsCss {
         inputIdPassword.sendKeys("Password12345!");
         WebElement btnYallaLogin = driver.findElement(By.cssSelector("button[type='submit']"));
         btnYallaLogin.click();
-        driver.quit();
+
     }
 
     static void pause(int time){
