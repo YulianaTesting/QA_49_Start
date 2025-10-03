@@ -37,6 +37,46 @@ public class SelectorsCss {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://ilcarro.web.app/search");
+        WebElement btnSearch = driver.findElement(By.cssSelector("a[href='/search']"));
+        btnSearch.click();
+        WebElement btnLetCarWork = driver.findElement(By.cssSelector("a[href='/let-car-work']"));
+        btnLetCarWork.click();
+        pause(3);
+        WebElement btnTermsOfUse = driver.findElement(By.cssSelector("a[href='/terms-of-use']"));
+        btnTermsOfUse.click();
+        pause(3);
+        WebElement btnSU = driver.findElement(By.cssSelector("a.navigation-link[href^='/registration']"));
+        btnSU.click();
+        pause(2);
+        WebElement inputName = driver.findElement(By.cssSelector("input[formcontrolname='firstName']"));
+        inputName.sendKeys("Tony");
+        WebElement inputLN = driver.findElement(By.cssSelector("input[autocomplete='family-name']"));
+        inputLN.sendKeys("Black");
+        WebElement inputEmail = driver.findElement(By.cssSelector("input[autocomplete='email']"));
+        inputEmail.sendKeys("tony1256@gmail.com");
+        WebElement inputPas = driver.findElement(By.cssSelector("input[autocomplete='new-password']"));
+        inputPas.sendKeys("Password12345!");
+        WebElement btnLabel = driver.findElement(By.cssSelector("label[class='checkbox-label terms-label']"));
+        btnLabel.click();
+        WebElement btnYalla = driver.findElement(By.cssSelector("button[type='submit']"));
+        btnYalla.click();
+        pause(5);
+        WebElement btnPositive = driver.findElement(By.cssSelector("button.positive-button"));
+        btnPositive.click();
+        WebElement btnLogout = driver.findElement(By.cssSelector("a[ng-reflect-router-link='logout']"));
+        btnLogout.click();
+        pause(5);
+        WebElement btnSearch1 = driver.findElement(By.cssSelector("a[href='/search']"));
+        btnSearch1.click();
+        WebElement btnLogin = driver.findElement(By.cssSelector("a.navigation-link[href^='/login'"));
+        btnLogin.click();
+        WebElement inputIdEmail = driver.findElement(By.cssSelector("input[formcontrolname='email']"));
+        inputIdEmail.sendKeys("tony1234@gmail.com");
+        WebElement inputIdPassword = driver.findElement(By.cssSelector("input[formcontrolname='password']"));
+        inputIdPassword.sendKeys("Password12345!");
+        WebElement btnYallaLogin = driver.findElement(By.cssSelector("button[type='submit']"));
+        btnYallaLogin.click();
+        driver.quit();
     }
 
     static void pause(int time){
