@@ -41,7 +41,7 @@ public class SelectorsXPath {
         WebElement btnSighOut = driver.findElement(By.xpath("//*[contains(text(),'Out')]"));
         SelectorsCss.pause(3);
         btnSighOut.click();
-        driver.close(); // close window
+        driver.close();// close window
         // driver.quit();  // close browser
 
 
